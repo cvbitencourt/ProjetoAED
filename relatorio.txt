@@ -1,0 +1,17 @@
+RELATÓRIO DE ATIVIDADES INDIVIDUAL
+Nome do Aluno: Cecilia Vargas Bitencourt
+Matrícula: 20253000449
+
+Tabela de Registro de Trabalho:
+Data ; Horas Trabalhadas ; Tipo Tarefa ; Descrição da Tarefa Realizada
+------------------------------------------------------------------------------------------------------------------
+05/10/2026 ; 3.0 ; Estudar ; Leitura detalhada do enunciado e estudo sobre listas simplesmente encadeadas com sentinela e tail.
+06/10/2026 ; 2.0 ; Estudar ;
+07/10/2026 ; 2.5 ; Especificar os módulos/pacote/classes ; Definição da arquitetura e contratos dos TADs Candidato e ListaIdentificadores.
+09/10/2026 ; 4.0 ; Especificar os funções/métodos ; Detalhamento das operações obrigatórias como verificaPotencialCompanheiro e inserePotencialCompanheiro.
+10/10/2026 ; 1.5 ; Revisar especificações ; Revisão cruzada das assinaturas de métodos e restrições de restrição sexual e estado.
+11/10/2026 ; 3.0 ; Projetar ; Desenho do fluxo de interação textual do menu e da estrutura de leitura do arquivo candidatos.txt.
+12/10/2026 ; 6.0 ; Codificar módulo ; Implementação das classes ListaIdentificadores, TADCandidato e do GerenciadorAgencia em Java.
+13/10/2026 ; 2.0 ; Revisar código do módulo ; Verificação de conformidade para garantir que nenhuma estrutura nativa do Java (como ArrayList) foi utilizada.
+13/10/2026 ; 2.5 ; Realizar os testes ; Criação do módulo GeradorDados.java e execução de testes funcionais com as 6 tarefas do sistema.
+13/10/2026 ; 1.5 ; Diagnosticar e corrigir os problemas encontrados ; Correção de erros de compilação em escopos de variáveis e ajustes no cálculo do grau de interesse.
