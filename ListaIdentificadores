@@ -1,0 +1,21 @@
+public class ListaIdentificadores {
+    private static class No {
+        int id;
+        No proximo;
+
+        No(int id) {
+            this.id = id;
+            this.proximo = null;
+        }
+    }
+
+    private No inicio; // Sentinela
+    private No fim;    // Tail
+    private int tamanho;
+
+    public ListaIdentificadores() {
+        this.inicio = new No(-1); // Nó sentinela
+        this.fim = this.inicio;
+        this.tamanho = 0;
+    }
+}
