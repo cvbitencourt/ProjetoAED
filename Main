@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        GerenciadorAgencia gerenciador = new GerenciadorAgencia();
+
+        System.out.println("=== SISTEMA DE GERENCIAMENTO DE AGÊNCIA DE RELACIONAMENTO ===");
+
+        
+        GeradorDados.gerarArquivo("candidatos.txt", 15);
+        gerenciador.carregarCandidatos("candidatos.txt");
+}
+}
