@@ -1,9 +1,9 @@
 # ProjetoAED
 Agência de relacionamento
 
-=====================================================
+
 SISTEMA DE GERENCIAMENTO DE AGÊNCIA DE RELACIONAMENTO
-=====================================================
+
 
 GRUPO:
 - Aluno : [CECILIA VARGAS BITENCOURT]
