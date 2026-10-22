@@ -9,9 +9,9 @@ public class Main {
 
         System.out.println("=== SISTEMA DE GERENCIAMENTO DE AGÊNCIA DE RELACIONAMENTO ===");
 
-       
+
         if (!new File("candidatos.txt").exists()) {
-            GeradorDados.gerarArquivo("candidatos.txt", 15);
+            GeradorDados.gerarArquivo("candidatos.txt", 100);
         }
         gerenciador.carregarCandidatos("candidatos.txt");
 
