@@ -1,21 +1,21 @@
 public class ListaIdentificadores {
-    private static class No {
+    private static class Item {
         int id;
-        No proximo;
+        Item proximo;
 
-        No(int id) {
+        Item(int id) {
             this.id = id;
             this.proximo = null;
         }
     }
 
-    private No inicio; // Sentinela
-    private No fim;    // Tail
+    private Item sentinela;
+    private Item tail;
     private int tamanho;
 
     public ListaIdentificadores() {
-        this.inicio = new No(-1); // Nó sentinela
-        this.fim = this.inicio;
+        this.sentinela = new Item(-1);
+        this.tail = this.sentinela;
         this.tamanho = 0;
     }
 public boolean estaVazia() {
@@ -28,14 +28,14 @@ public boolean estaVazia() {
 
     public void inserir(int id) {
         if (contem(id)) return; 
-        No novoNo = new No(id);
-        this.fim.proximo = novoNo;
-        this.fim = novoNo;
+        Item novoItem = new Item(id);
+        this.tail.proximo = novoItem;
+        this.tail = novoItem;
         this.tamanho++;
     }
 
     public boolean contem(int id) {
-        No atual = this.inicio.proximo;
+        Item atual = this.sentinela.proximo;
         while (atual != null) {
             if (atual.id == id) {
                 return true;
@@ -47,15 +47,15 @@ public boolean estaVazia() {
 
     public int obter(int index) {
         if (index < 0 || index >= tamanho) throw new IndexOutOfBoundsException("Índice inválido");
-        No atual = this.inicio.proximo;
+        Item atual = this.sentinela.proximo;
         for (int i = 0; i < index; i++) {
             atual = atual.proximo;
         }
         return atual.id;
     }
     public void limpar() {
-    inicio.proximo = null;
-    fim = inicio;
+    sentinela.proximo = null;
+    tail = sentinela;
     tamanho = 0;
 }
 
