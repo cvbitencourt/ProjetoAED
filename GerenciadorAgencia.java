@@ -140,4 +140,11 @@ public class GerenciadorAgencia {
     public int getTotalCandidatos() {
         return totalCandidatos;
     }
+    private static int lerInt(Scanner sc, String msg) {
+    while (true) {
+        System.out.print(msg);
+        try { return Integer.parseInt(sc.nextLine().trim()); }
+        catch (NumberFormatException e) { System.out.println("Digite um número inteiro."); }
+    }
+}
 }
