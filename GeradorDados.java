@@ -5,9 +5,12 @@ import java.util.Random;
 
 public class GeradorDados {
     private static final String[] NOMES = {"Ana", "Bruno", "Carlos", "Daniela", "Eduardo", "Fernanda", "Gabriel", "Helena", "Igor", "Jéssica", "Lucas", "Mariana", "Nicolas", "Patrícia", "Rafael", "Sabrina", "Thiago", "Vanessa", "Wagner", "Juliana"};
-    private static final String[] ESTADOS = {"SP", "RJ", "MG", "ES", "RS", "PR", "SC"};
+    private static final String[] ESTADOS = {"SP", "RJ", "MG", "ES"};
     private static final char[] SEXOS = {'M', 'F'};
     private static final char[] INTERESSES_SEXO = {'M', 'F', 'I'};
+
+    private static final int MIN_AREAS = 3;
+    private static final int MAX_AREAS = 6;
 
     public static void gerarArquivo(String nomeArquivo, int qtdCandidatos) {
         Random random = new Random();
@@ -20,14 +23,13 @@ public class GeradorDados {
                 String estado = ESTADOS[random.nextInt(ESTADOS.length)];
                 char sexo = SEXOS[random.nextInt(SEXOS.length)];
                 char sexoInt = INTERESSES_SEXO[random.nextInt(INTERESSES_SEXO.length)];
-                int numAreas = 1 + random.nextInt(4); // 1 a 4 áreas
+                int numAreas = MIN_AREAS + random.nextInt(MAX_AREAS - MIN_AREAS + 1);
 
                 bw.write(nome + "\n");
                 bw.write(estado + "\n");
                 bw.write(sexo + "\n");
                 bw.write(sexoInt + "\n");
                 bw.write(numAreas + "\n");
-
 
                 boolean[] areasEscolhidas = new boolean[9];
                 for (int a = 0; a < numAreas; a++) {
@@ -46,3 +48,4 @@ public class GeradorDados {
         }
     }
 }
+
