@@ -48,6 +48,13 @@ public class Candidato {
     public ListaIdentificadores getPotenciaisCompanheiros() {
         return potenciaisCompanheiros;
     }
+    public void setNome(String nome) { this.nome = nome; }
+
+    public void setSiglaEstado(String sigla) { this.siglaEstado = sigla; }
+
+    public void setSexo(char sexo) { this.sexo = sexo; }
+
+    public void setSexoInteresse(char s) { this.sexoInteresse = s; }
 
     
     public boolean reside(String sigla) {
