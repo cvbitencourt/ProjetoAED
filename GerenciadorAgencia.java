@@ -41,15 +41,14 @@ public class GerenciadorAgencia {
         }
     }
 
-    public void processarPotenciaisCompanheiros() {
-        for (int i = 0; i < totalCandidatos; i++) {
-            for (int j = 0; j < totalCandidatos; j++) {
-                if (Candidato.verificaPotencialCompanheiro(candidatos[i], candidatos[j], grauInteresseDesejado)) {
-                    candidatos[i].inserePotencialCompanheiro(candidatos[j]);
-                }
-            }
-        }
-    }
+ public void processarPotenciaisCompanheiros() {
+    for (int i = 0; i < totalCandidatos; i++)
+        candidatos[i].limparPotenciaisCompanheiros();
+    for (int i = 0; i < totalCandidatos; i++)
+        for (int j = 0; j < totalCandidatos; j++)
+            if (Candidato.verificaPotencialCompanheiro(candidatos[i], candidatos[j], grauInteresseDesejado))
+                candidatos[i].inserePotencialCompanheiro(candidatos[j]);
+}
 
     
     public void setGrauInteresse(int grau) {
