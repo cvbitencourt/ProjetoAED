@@ -53,6 +53,11 @@ public boolean estaVazia() {
         }
         return atual.id;
     }
+    public void limpar() {
+    inicio.proximo = null;
+    fim = inicio;
+    tamanho = 0;
+}
 
 
 }
