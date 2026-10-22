@@ -92,6 +92,9 @@ public class Candidato {
 
         return grauComum >= grauMinimo;
     }
+    public void limparPotenciaisCompanheiros() {
+    potenciaisCompanheiros.limpar();
+}
 
     private static int calcularPesoArea(int idArea) {
         switch (idArea) {
