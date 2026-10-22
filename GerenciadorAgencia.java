@@ -75,28 +75,31 @@ public class GerenciadorAgencia {
     }
 
     
-    public void tarefa3(int k) {
-        System.out.println("\n--- Top " + k + " Candidatos com Maior Número de Companheiros ---");
-        // Ordenação simples por seleção (Selection Sort em vetor)
-        int[] ids = new int[totalCandidatos];
-        for (int i = 0; i < totalCandidatos; i++) ids[i] = i;
+public void tarefa3(int k) {
+    System.out.println("\n--- Top " + k + " Candidatos com Maior Número de Companheiros ---");
 
-        for (int i = 0; i < totalCandidatos - 1; i++) {
-            for (int j = i + 1; j < totalCandidatos; j++) {
-                if (candidatos[ids[j]].numeroCompanheiros() > candidatos[ids[i]].numeroCompanheiros()) {
-                    int temp = ids[i];
-                    ids[i] = ids[j];
-                    ids[j] = temp;
-                }
-            }
-        }
-
-        int limite = Math.min(k, totalCandidatos);
-        for (int i = 0; i < limite; i++) {
-            Candidato c = candidatos[ids[i]];
-            System.out.println((i + 1) + ". ID: " + c.getIdentificador() + " | Nome: " + c.getNome() + " | Companheiros: " + c.numeroCompanheiros());
-        }
+    if (k <= 0) {
+        System.out.println("K deve ser maior que zero.");
+        return;
     }
+
+    int[] ids = new int[totalCandidatos];
+    for (int i = 0; i < totalCandidatos; i++) ids[i] = i;
+
+    int limite = Math.min(k, totalCandidatos);
+    for (int i = 0; i < limite; i++) {
+        int melhor = i;
+        for (int j = i + 1; j < totalCandidatos; j++)
+            if (candidatos[ids[j]].numeroCompanheiros() > candidatos[ids[melhor]].numeroCompanheiros())
+                melhor = j;
+        int temp = ids[i]; ids[i] = ids[melhor]; ids[melhor] = temp;
+    }
+
+    for (int i = 0; i < limite; i++) {
+        Candidato c = candidatos[ids[i]];
+        System.out.println((i + 1) + ". ID: " + c.getIdentificador() + " | Nome: " + c.getNome() + " | Companheiros: " + c.numeroCompanheiros());
+    }
+}
 
    
     public void tarefa4() {
